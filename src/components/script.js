@@ -19,29 +19,52 @@ export default router; */
 export default {
   data() {
     return {
+      drawer: false,
       novoItem: {
+        id: 0,
         nome: "",
         descricao: "",
-        Anosdeduração:"",
-        CargoHorária:"",
-        Certificação:"",
-        Professores:""
+        Anosdeduração: "",
+        CargoHorária: "",
+        Certificação: "",
+        Professores: ""
       },
       listaItens: [],
+      itemEditado: null // Adicione uma propriedade para armazenar o item sendo editado
     };
   },
-  methods: {
-    adicionarItem() {
-      this.listaItens.push({ ...this.novoItem });
-      this.novoItem = { nome: "", descricao: "", Anosdeduração:"", CargoHorária:"" , Certificação:"" , Professores:""};
+  methods:
+   {
+    navegar(path) {
+      this.$router.push(path)
     },
-    
-/*     editarItem(index) {
-      // Implemente a lógica para editar o item na lista
-    }, */
+      adicionarItem() {
+      const newItemId = this.listaItens.length ? this.listaItens[this.listaItens.length - 1].id + 1 : 1;
+      this.listaItens.push({
+        id: newItemId,
+        ...this.novoItem
+      });
+      this.novoItem = { nome: "", descricao: "", Anosdeduração: "", CargoHorária: "", Certificação: "", Professores: "" };
+    },
+     editarItem(item) {
+      this.itemEditado = { ...item }; // Faz uma cópia do item sendo editado
+    },
+    salvarEdicao() {
+      // Encontra o índice do item sendo editado na lista
+      const itemIndex = this.listaItens.findIndex(listaItem => listaItem.id === this.itemEditado.id);
+      if (itemIndex !== -1) {
+        // Atualiza o item na lista com os dados do item editado
+        this.listaItens.splice(itemIndex, 1, this.itemEditado);
+        // Limpa o item editado e volta para o estado de adicionar novo item
+        this.itemEditado = null;
+      }
+    },
+    cancelarEdicao() {
+      // Limpa o item editado e volta para o estado de adicionar novo item
+      this.itemEditado = null;
+    },
     excluirItem(index) {
       this.listaItens.splice(index, 1);
-    },
-  },
-
+    }
+  }
 };

@@ -1,21 +1,112 @@
-.pp{
+/*======== GERAL =========*/
 
-    margin:  0;
-    padding: 0;
+
+/* .container {
+	height: auto;
+	margin: 100 auto;
+	display: flex;
+	justify-content: space-between;
+} */
+
+
+
+.pp {
+
+	scroll-margin-bottom: 50px;
+	margin-top: 15%;
+	padding: 0;
 }
 
 .cursos {
-    color: blue;
+
+	color: blue;
 
 }
-.rsp{
-    background-position: 2;
-    color: rgb(0, 0, 0);
+
+
+.add {
+
+	color: rgb(67, 1, 129);
 }
 
-.add{
+.group {
 
-    color: rgb(63, 0, 122);
+	margin: 128px 154px;
+	align-self: auto;
+}
+
+.src {
+
+	padding: 5px
+}
+
+/*======== RODAPÉ =========*/
+.cauda {
+	height: auto;
+	margin: 100 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background: #1e1288 !important;
+	padding: 0px;
 }
 
 
+
+.divRodape {
+	width: 33.333333%;
+}
+
+
+
+.divRodape {
+	background: #1e1288;
+}
+
+.divImagem {
+	text-align: center;
+}
+
+.divImagem img {
+	margin-bottom: 50px;
+}
+
+.divImagem img:last-child {
+	margin-bottom: 10;
+}
+
+.divRodapeImagem {
+	margin-bottom: 3px;
+}
+
+.divRodape p {
+	color: #BDC3DC;
+	margin: 0 0 30px 0;
+	font-size: 1em;
+}
+
+.divRodape p:last-child {
+	margin-bottom: 0;
+}
+
+.divRodape p.pLink {
+	font-weight: bold;
+	color: #FFF;
+}
+
+.divRodape p.pMargem {
+	margin-bottom: 20px;
+}
+
+.divRodape p:first-child {
+	margin-top: 1px;
+}
+
+.divSvg {
+	margin-right: 1px;
+	margin-bottom: 6px;
+}
+
+.divSvg:last-child {
+	margin-right: 0;
+}
