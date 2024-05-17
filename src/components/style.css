@@ -12,9 +12,9 @@
 
 .pp {
 
-	scroll-margin-bottom: 50px;
+	scroll-margin-bottom: 100px;
 	margin-top: 15%;
-	padding: 0;
+	padding: 15;
 }
 
 .cursos {
@@ -42,6 +42,7 @@
 
 /*======== RODAPÉ =========*/
 .cauda {
+	
 	height: auto;
 	margin: 100 auto;
 	display: flex;

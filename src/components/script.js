@@ -19,6 +19,8 @@ export default router; */
 export default {
   data() {
     return {
+      email: '',
+      password: '',
       drawer: false,
       novoItem: {
         id: 0,
@@ -27,8 +29,10 @@ export default {
         Anosdeduração: "",
         CargoHorária: "",
         Certificação: "",
-        Professores: ""
+        Professores: "",
+       
       },
+      
       listaItens: [],
       itemEditado: null // Adicione uma propriedade para armazenar o item sendo editado
     };
@@ -65,6 +69,6 @@ export default {
     },
     excluirItem(index) {
       this.listaItens.splice(index, 1);
-    }
+    },
   }
 };
