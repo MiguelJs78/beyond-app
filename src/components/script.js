@@ -14,8 +14,8 @@ const router = createRouter({
 
 export default router; */
 
-// ------------------ APP VUE--------------------------//
-
+// ------------------ APP VUE-------------------------------------------------//
+import { auth } from '../config/index' // Importe a configuração do Firebase
 export default {
   data() {
     return {
@@ -30,19 +30,29 @@ export default {
         CargoHorária: "",
         Certificação: "",
         Professores: "",
-       
+
       },
-      
+
       listaItens: [],
       itemEditado: null // Adicione uma propriedade para armazenar o item sendo editado
     };
   },
-  methods:
-   {
+  methods: {
     navegar(path) {
       this.$router.push(path)
     },
-      adicionarItem() {
+    async login() {
+      try {
+        const userCredential = await auth.signInWithEmailAndPassword(this.email, this.password);
+        console.log('Usuário logado:', userCredential.user);
+        // Redirecione o usuário para a página desejada após o login
+        this.$router.push('/Minha_Home');
+      } catch (error) {
+        console.error('Erro ao fazer login:', error.message);
+        alert(error.message);
+      }
+    },
+    adicionarItem() {
       const newItemId = this.listaItens.length ? this.listaItens[this.listaItens.length - 1].id + 1 : 1;
       this.listaItens.push({
         id: newItemId,
@@ -50,7 +60,7 @@ export default {
       });
       this.novoItem = { nome: "", descricao: "", Anosdeduração: "", CargoHorária: "", Certificação: "", Professores: "" };
     },
-     editarItem(item) {
+    editarItem(item) {
       this.itemEditado = { ...item }; // Faz uma cópia do item sendo editado
     },
     salvarEdicao() {
@@ -70,5 +80,6 @@ export default {
     excluirItem(index) {
       this.listaItens.splice(index, 1);
     },
-  }
+  },
+
 };

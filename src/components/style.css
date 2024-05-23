@@ -11,34 +11,72 @@
 
 
 .pp {
-
-	scroll-margin-bottom: 100px;
-	margin-top: 15%;
-	padding: 15;
+	background: #1e1288;
+	display: flex;
+	align-items: center;	
 }
+
+.hamburguer{
+	margin-right: 60% !important;
+}
+.menu__lateral{
+	z-index: 1;
+	
+}
+
+.login {
+  max-width: 320px;
+  margin: auto;
+  padding: 45px;
+  border-radius: 10px;
+}
+
+
+.register {
+    max-width: 300px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+.register {
+    max-width: 300px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+.barra_d_navegacao {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-grow: 1;}
+
+	.text-decoration-none {
+		text-decoration: none;}
 
 .cursos {
-
+    align-items: center;
 	color: blue;
 
-}
+} 
 
 
-.add {
+/* .add {
 
 	color: rgb(67, 1, 129);
-}
+} */
 
-.group {
-
+ .group {
+	align-items: center;
 	margin: 128px 154px;
 	align-self: auto;
-}
+} 
 
-.src {
+/* .src {
 
 	padding: 5px
-}
+} */
 
 /*======== RODAPÉ =========*/
 .cauda {
