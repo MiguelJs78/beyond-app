@@ -1,10 +1,7 @@
 <template>
-  <v-app>
-    
-    <v-main>
-
+    <main>
+   KKKKKKKKKKKKKKKKKKKKK
       <v-container>
-
         <v-row justify="center">
           <v-col cols="12" sm="8">
             <v-card>
@@ -19,7 +16,7 @@
                   <v-text-field v-model="novoItem.Professores" label="Professores" required></v-text-field>
                   <v-btn type="submit" color="primary">Adicionar</v-btn>
                 </v-form>
-                
+
                 <v-list>
                   <v-list-item v-for="(item, index) in listaItens" :key="index">
                     <v-list-item-content>
@@ -45,11 +42,8 @@
           </v-col>
         </v-row>
       </v-container>
-    
-    </v-main>
-    
-  </v-app>
+    </main>
 </template>
 
 <script src="../components/script">
-</script><style src="../components/style.css"></style>
+<style src="../components/style.css"></style>

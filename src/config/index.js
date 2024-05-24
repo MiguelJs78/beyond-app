@@ -15,6 +15,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 // Initialize Firebase Auth
-const auth = getAuth(app);
+const auth = getAuth();
 
 export { auth,signInWithEmailAndPassword };
+export {app};

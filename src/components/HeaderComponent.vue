@@ -61,11 +61,11 @@ export default {
         case 'Cursos':
           return 'tela_curso';
         case 'Mais Serviços':
-          return 'mais-servicos';
+          return 'Meu_forum';
         case 'calendario':
           return 'Meu_calendario';
         case 'Sobre Nós':
-          return 'sobre-nos';
+          return '';
         case 'Biblioteca':
           return 'Minha_Biblioteca';
         case 'Fazer Login':

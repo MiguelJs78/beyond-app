@@ -21,7 +21,14 @@ export default {
     return {
       email: '',
       password: '',
+      valid: false,
       drawer: false,
+       rules: {
+        required: value => !!value || 'Obrigatório.',
+        email: value => /.+@.+\..+/.test(value) || 'E-mail inválido.',
+        min: value => value.length >= 6 || 'A senha deve ter pelo menos 6 caracteres.'
+      },
+      
       novoItem: {
         id: 0,
         nome: "",
@@ -38,7 +45,7 @@ export default {
     };
   },
   methods: {
-    navegar(path) {
+    goTo(path) {
       this.$router.push(path)
     },
     async login() {

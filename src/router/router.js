@@ -2,21 +2,24 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import NotFound from '../pages/NotFound.vue';
 import tela_curso from '../pages/tela_curso.vue' // Importe o componente NotFound
-import login_eu from '../pages/login_eu.vue'
+// import login_eu from '../pages/login_eu.vue'
 import Registro_eu from '../pages/Registro_eu.vue'
 import Meu_calendario from '../pages/Meu_calendario.vue'
-import Meu_fórum from '../pages/Meu_forum.vue'
+// import Meu_fórum from '../pages/Meu_forum.vue'
 import Minha_Biblioteca from '../pages/Minha_Biblioteca.vue'
-import Minha_Home from '../pages/Minha_Home.vue'
 
+import LoginEu from '../pages/LoginEu.vue'
+// import Minha_Home from '../pages/Minha_Home.vue'
 
 Vue.use(VueRouter);
 
 const routes = [
 
- { path: '*',
+ { 
+  path: '*',
   name: 'NotFound',
-  component: NotFound },
+  component: NotFound 
+},
 
  {
   path: '/tela_curso',
@@ -24,20 +27,23 @@ const routes = [
   component: tela_curso
   
  },
+ 
+//  {
+  
+//   path: '/login_eu',
+//   name: 'login',
+//   component: login_eu
+  
+//  },
+
  {
   
-  path: '/',
-  name: 'login_eu',
-  component: login_eu
-  
- },
- {
-  
-  path: '/.',
-  name: 'Registro_eu',
+  path: '/registro_eu',
+  name: 'registro',
   component: Registro_eu
   
  },
+
  {
   path: '/Meu_calendario',
   name: 'Meu_calendario',
@@ -45,11 +51,11 @@ const routes = [
   
  },
  
- {
-  path:encodeURI('/Meu_forum'),
-  name: 'Meu_forum',
-  component: Meu_fórum
- },
+//  {
+//   path:encodeURI('/Meu_forum'),
+//   name: 'Meu_forum',
+//   component: Meu_fórum
+//  },
  
  {
   path: '/Minha_Biblioteca',
@@ -59,9 +65,9 @@ const routes = [
  },
 
  {
-  path: '/Minha_Home',
-  name: 'Minha_Home',
-  component: Minha_Home
+  path: '/login_eu',
+  name: 'login',
+  component: LoginEu,
   
  },
 
@@ -70,7 +76,8 @@ const routes = [
 
 const router = new VueRouter({
   routes,
-  history: true, // Modo de histórico HTML5
+  mode: 'history',
+  // history: true, // Modo de histórico HTML5
 });
 
 export default router
