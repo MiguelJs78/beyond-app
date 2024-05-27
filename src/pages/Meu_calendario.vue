@@ -2,8 +2,6 @@
     <v-app>
       <v-main>
      
- 
-  
           <!-- Outros conteúdos do App.vue -->
   
       </v-main>
